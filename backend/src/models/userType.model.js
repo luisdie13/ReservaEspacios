@@ -3,9 +3,9 @@ import sequelize from '../config/db.js';
 
 const UserType = sequelize.define('UserType', {
   tipo_usuario: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.STRING(20),
     primaryKey: true,
-    autoIncrement: true,
+    // autoIncrement: true, // REMOVE THIS LINE - autoIncrement is for INTEGER/BIGINT primary keys
   },
   nombre: {
     type: DataTypes.STRING,

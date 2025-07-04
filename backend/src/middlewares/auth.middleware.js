@@ -10,6 +10,11 @@ const protect = async (req, res, next) => {
   ) {
     try {
       token = req.headers.authorization.split(' ')[1];
+      console.log('--- DEBUG: Extracted Token ---');
+      console.log(token); // show what jwt.verify is receiving
+      console.log('------------------------------');
+
+
       const decoded = jwt.verify(token, process.env.JWT_SECRET);
       
       req.user = await User.findByPk(decoded.id, {
