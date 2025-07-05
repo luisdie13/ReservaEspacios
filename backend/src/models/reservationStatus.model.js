@@ -3,9 +3,9 @@ import sequelize from '../config/db.js';
 
 const ReservationStatus = sequelize.define('ReservationStatus', {
   estado_reserva: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.STRING(50),
     primaryKey: true,
-    autoIncrement: true,
+    //autoIncrement: true,
   },
   nombre: {
     type: DataTypes.STRING(50),

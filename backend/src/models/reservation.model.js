@@ -28,7 +28,7 @@ const Reservation = sequelize.define('Reservation', {
     allowNull: false,
   },
   estado_reserva: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.STRING(50),
     allowNull: false,
     defaultValue: 1, // 1 = Pendiente, 2 = Confirmada, 3 = Cancelada
   },
